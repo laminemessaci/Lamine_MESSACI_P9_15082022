@@ -47,3 +47,14 @@ describe("Given I am connected as an employee", () => {
     })
   })
 })
+
+ describe("WHEN I am on Bills page with loading", () => {
+    test("THEN Loading page should be rendered", () => {
+      const html = BillsUI({ loading: true });
+      document.body.innerHTML = html;
+
+      expect(screen.getAllByText("Loading...")).toBeTruthy();
+    });
+  });
+
+
