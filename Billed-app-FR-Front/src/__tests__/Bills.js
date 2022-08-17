@@ -57,4 +57,13 @@ describe("Given I am connected as an employee", () => {
     });
   });
 
+describe("WHEN I am on Bills page and there are no bills", () => {
+  test("THEN the bills list should be empty", () => {
+    const html = BillsUI({ data: [] });
+    document.body.innerHTML = html;
 
+    const eyeIcon = screen.queryByTestId("icon-eye");
+
+    expect(eyeIcon).toBeNull();
+  });
+});
