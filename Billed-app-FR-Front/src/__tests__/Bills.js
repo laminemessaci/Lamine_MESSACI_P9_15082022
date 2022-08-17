@@ -38,7 +38,7 @@ describe("Given I am connected as an employee", () => {
         // transform dates
          const d1 = convertToDate(a);
         const d2 = convertToDate(b);
-
+       // return d1 <= d2 ? 1 : -1
         if (d1 <= d2) return 1;
         if (d1 > d2) return -1;
       } 
