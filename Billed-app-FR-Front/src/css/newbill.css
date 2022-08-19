@@ -68,10 +68,8 @@ select:focus {
 
 .error-message {
   margin: 4px 0;
-
   color: white;
   font-size: 14px;
-
   transition: color 350ms;
 }
 
