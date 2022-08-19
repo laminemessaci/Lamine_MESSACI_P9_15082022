@@ -20,10 +20,11 @@ export default class NewBill {
 
   handleChangeFile = (e) => {
     e.preventDefault();
+    console.log("event : ", e.target.value);
     const file = this.document.querySelector(`input[data-testid="file"]`)
       .files[0];
 
-    console.log("file => ", file.name.match(/\.[0-9a-z]+$/i)[0]);
+    // console.log("file => ", file.name.match(/\.[0-9a-z]+$/i)[0]);
 
     const fileExtension = file.name.match(/\.[0-9a-z]+$/i)[0];
     const authorizedImages = [".png", ".jpg", ".jpeg"];
@@ -52,14 +53,14 @@ export default class NewBill {
           },
         })
         .then(({ fileUrl, key }) => {
-          console.log(fileUrl);
+          console.log(fileUrl, "---", key);
           this.billId = key;
           this.fileUrl = fileUrl;
           this.fileName = fileName;
         })
         .catch((error) => console.error(error));
     } else {
-      //reset values
+      //reset value
       e.target.value = "";
       // display error Message
       errorMessage.textContent = "Fichier JPG, JPEG ou PNG uniquement";
@@ -93,7 +94,7 @@ export default class NewBill {
       status: "pending",
     };
     this.updateBill(bill);
-    this.onNavigate(ROUTES_PATH["Bills"]);
+    // this.onNavigate(ROUTES_PATH["Bills"]);
   };
 
   // not need to cover this function by tests
