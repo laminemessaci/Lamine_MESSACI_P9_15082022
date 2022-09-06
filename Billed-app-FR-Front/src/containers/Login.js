@@ -35,6 +35,7 @@ export default class Login {
       ).value,
       status: "connected",
     };
+    console.log(user);
     this.localStorage.setItem("user", JSON.stringify(user));
     this.login(user)
       .catch((err) => this.createUser(user))
