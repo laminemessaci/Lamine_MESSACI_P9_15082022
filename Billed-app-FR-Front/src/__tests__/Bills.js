@@ -6,7 +6,7 @@ import { screen, waitFor } from "@testing-library/dom";
 import mockStore from "../__mocks__/store.js";
 import BillsUI from "../views/BillsUI.js";
 import { bills } from "../fixtures/bills.js";
-import { ROUTES_PATH } from "../constants/routes.js";
+import { ROUTES, ROUTES_PATH } from "../constants/routes.js";
 import { localStorageMock } from "../__mocks__/localStorage.js";
 
 import router from "../app/Router.js";
@@ -66,6 +66,10 @@ describe("Given I am connected as an employee", () => {
     });
   });
   describe("And I click on the eye icon", () => {
+     const onNavigate = (pathname) => {
+       document.body.innerHTML = ROUTES({ pathname });
+     };
+
     test("A modal should open", () => {
       document.body.innerHTML = BillsUI({ data: bills });
       const sampleBills = new Bills({
@@ -88,7 +92,7 @@ describe("Given I am connected as an employee", () => {
       });
       const iconEye = document.querySelector(`div[data-testid="icon-eye"]`);
       $.fn.modal = jest.fn();
-      sampleBills.handleClickIconEye(iconEye);
+     // sampleBills.handleClickIconEye(iconEye);
       expect(document.querySelector(".modal")).toBeTruthy();
     });
   });
