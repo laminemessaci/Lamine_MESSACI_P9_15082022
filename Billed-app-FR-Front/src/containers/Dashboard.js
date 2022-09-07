@@ -88,7 +88,7 @@ export default class {
     $("#modaleFileAdmin1")
       .find(".modal-body")
       .html(
-        `<div style='text-align: center;'><img width=${imgWidth} src=${billUrl} alt="Bill"/></div>`
+        `<div style='text-align: center;'>${billUrl}.includes('null')?<p>la facture n'existe pas </p>: <img width=${imgWidth} src=${billUrl} alt="Bill"/></div>`
       );
     if (typeof $("#modaleFileAdmin1").modal === "function")
       $("#modaleFileAdmin1").modal("show");
