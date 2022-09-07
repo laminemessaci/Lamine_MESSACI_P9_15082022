@@ -66,9 +66,9 @@ describe("Given I am connected as an employee", () => {
     });
   });
   describe("And I click on the eye icon", () => {
-      const onNavigate = (pathname) => {
-        document.body.innerHTML = ROUTES({ pathname });
-      };
+    const onNavigate = (pathname) => {
+      document.body.innerHTML = ROUTES({ pathname });
+    };
     test("A modal should open", () => {
       document.body.innerHTML = BillsUI({ data: bills });
       const sampleBills = new Bills({
@@ -82,8 +82,6 @@ describe("Given I am connected as an employee", () => {
       expect(sampleBills.handleClickIconEye).toBeCalled();
     });
     test("Then the modal should display the attached image", () => {
-
-     
       document.body.innerHTML = BillsUI({ data: bills });
       const sampleBills = new Bills({
         document,
