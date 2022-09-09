@@ -84,11 +84,17 @@ export default class {
 
   handleClickIconEye = () => {
     const billUrl = $("#icon-eye-d").attr("data-bill-url");
+    console.log("billUrl: " + billUrl);
+    const isBillNull = billUrl.includes("null");
+    console.log("isBillNull =>", isBillNull);
+    // Fix user experience when clicking on eye
     const imgWidth = Math.floor($("#modaleFileAdmin1").width() * 0.8);
     $("#modaleFileAdmin1")
       .find(".modal-body")
       .html(
-        `<div style='text-align: center;'>${billUrl}.includes('null')?<p>la facture n'existe pas </p>: <img width=${imgWidth} src=${billUrl} alt="Bill"/></div>`
+        isBillNull
+          ? `<div style='text-align: center;'><p> la facture n'existe pas</p></div>`
+          : `<div style='text-align: center;'><img width=${imgWidth} src=${billUrl} alt="Bill"/>'</div>`
       );
     if (typeof $("#modaleFileAdmin1").modal === "function")
       $("#modaleFileAdmin1").modal("show");
@@ -143,14 +149,14 @@ export default class {
     // console.log("this.show: ", this);
     if (this.counter === undefined || this.index !== index) {
       this.counter = 0;
-      console.log("counter is undefined !", this.counter);
+      // console.log("counter is undefined !", this.counter);
     }
     if (this.index === undefined || this.index !== index) {
       this.index = index;
-      console.log("index is undefined !: ", index);
+      //console.log("index is undefined !: ", index);
     }
     if (this.counter % 2 === 0) {
-      console.log("modulo counter is ok");
+      // console.log("modulo counter is ok");
       $(`#arrow-icon${this.index}`).css({ transform: "rotate(0deg)" });
       $(`#status-bills-container${this.index}`).html(
         cards(filteredBills(bills, getStatus(this.index)))
@@ -161,7 +167,8 @@ export default class {
       $(`#status-bills-container${this.index}`).html("");
       this.counter++;
     }
-
+    // not need to cover this function by tests
+    /* istanbul ignore next */
     bills.forEach((bill) => {
       // FIX : add a listener for each bill without listener
       if (!$(`#open-bill${bill.id}`).data("listener")) {

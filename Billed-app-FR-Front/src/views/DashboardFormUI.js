@@ -22,6 +22,12 @@ export const modal = () => `
   `;
 
 export default (bill) => {
+  console.log("bill Name =>", bill.fileName);
+  let commentary = bill.commentary || "test";
+  bill.fileName !== "null" ? bill.fileName : (bill.fileName = "indéfinit");
+  bill.commentAdmin ? bill.commentAdmin : (bill.commentAdmin = "");
+  bill.name ? bill.name : (bill.name = "nom de facture non definit!");
+
   return `
     <div class="container dashboard-form" data-testid="dashboard-form">
       <div class="row">
@@ -29,7 +35,7 @@ export default (bill) => {
           <label for="expense-type" class="bold-label">Type de dépense</label>
           <div class='input-field'> ${bill.type} </div>
           <label for="expense-name" class="bold-label">Nom de la dépense</label>
-          <div class='input-field'> ${bill.name} </div>
+          <div class='input-field'> ${bill.fileName} </div>
           <label for="datepicker" class="bold-label">Date</label>
           <div class='input-field input-flex'>
             <span>${formatDate(bill.date)}</span>
@@ -38,9 +44,7 @@ export default (bill) => {
         </div>
         <div class="col-sm" id="dashboard-form-col2">
           <label for="commentary" class="bold-label">Commentaire</label>
-          <div class='textarea-field' style="height: 300px;"> ${
-            bill.commentary
-          } </div>
+          <div class='textarea-field' style="height: 300px;"> ${commentary} </div>
         </div>
       </div>
       <div class="row">
@@ -69,7 +73,7 @@ export default (bill) => {
         <div class="col-sm">
           <label for="file" class="bold-label">Justificatif</label>
             <div class='input-field input-flex file-flex'>
-            <span id="file-name-admin">${bill.fileName}</span>
+            <span id="file-name-admin">${bill.name}</span>
             <div class='icons-container'>
               <span id="icon-eye-d" data-testid="icon-eye-d" data-bill-url="${
                 bill.fileUrl
