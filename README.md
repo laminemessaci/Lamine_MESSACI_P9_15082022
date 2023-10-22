@@ -1,4 +1,10 @@
 # Biiled 
+![ScreenShot_20231022161713](https://github.com/laminemessaci/Lamine_MESSACI_P9_15082022/assets/60298344/2784c655-eb28-46c2-a822-1d3e1a895166)
+![ScreenShot_20231022161804](https://github.com/laminemessaci/Lamine_MESSACI_P9_15082022/assets/60298344/2aed267d-6996-4cc6-b547-5902ee375c6f)
+![ScreenShot_20231022161828](https://github.com/laminemessaci/Lamine_MESSACI_P9_15082022/assets/60298344/c5f10f05-133d-4720-a2dd-69ecdd85b6dd)
+![ScreenShot_20231022161936](https://github.com/laminemessaci/Lamine_MESSACI_P9_15082022/assets/60298344/437699e8-c453-4d7c-a37d-0198abadbdc2)
+![ScreenShot_20231022161954](https://github.com/laminemessaci/Lamine_MESSACI_P9_15082022/assets/60298344/fd8c649f-f169-4541-a66b-fb9d8cdb464c)
+
 # Frontend :
 ## L'architecture du projet :
 Ce projet, dit frontend, est connecté à un service API backend que vous devez aussi lancer en local.
