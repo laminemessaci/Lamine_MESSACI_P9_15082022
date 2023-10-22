@@ -4,8 +4,13 @@
 ![ScreenShot_20231022161828](https://github.com/laminemessaci/Lamine_MESSACI_P9_15082022/assets/60298344/c5f10f05-133d-4720-a2dd-69ecdd85b6dd)
 ![ScreenShot_20231022161936](https://github.com/laminemessaci/Lamine_MESSACI_P9_15082022/assets/60298344/437699e8-c453-4d7c-a37d-0198abadbdc2)
 ![ScreenShot_20231022161954](https://github.com/laminemessaci/Lamine_MESSACI_P9_15082022/assets/60298344/fd8c649f-f169-4541-a66b-fb9d8cdb464c)
-
+![Messaci_Lamine_2_rapport_test_Jest_05082022](https://github.com/laminemessaci/Lamine_MESSACI_P9_15082022/assets/60298344/453b6639-e3a5-4a92-821b-a67de20b452e)
+![Messaci_Lamine_3_rapport_couverture_05082022](https://github.com/laminemessaci/Lamine_MESSACI_P9_15082022/assets/60298344/3520dab3-733f-4914-b987-54949375ad29)
+[Messaci_Lamine_4_plan_test_05082022.pdf](https://github.com/laminemessaci/Lamine_MESSACI_P9_15082022/files/13063449/Messaci_Lamine_4_plan_test_05082022.pdf)
 # Frontend :
+
+
+
 ## L'architecture du projet :
 Ce projet, dit frontend, est connecté à un service API backend que vous devez aussi lancer en local.
 
