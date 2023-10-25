@@ -14,6 +14,7 @@ export default () => {
   rootDiv.innerHTML = ROUTES({ pathname: window.location.pathname })
 
   window.onNavigate = (pathname) => {
+    console.log('onNavigate', pathname)
 
     window.history.pushState(
       {},
