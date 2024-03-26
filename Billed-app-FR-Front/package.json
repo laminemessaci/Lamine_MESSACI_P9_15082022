@@ -22,7 +22,7 @@
   },
   "type": "commonjs",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.19.2",
     "global": "^4.4.0",
     "jquery": "^3.5.1",
     "path": "^0.12.7"
